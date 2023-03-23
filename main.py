@@ -64,16 +64,16 @@ class Queue:
 
 class Pentti:
     """
-    Pentti class
+    Pentti class to solve the maze, a maze can be set with public function and 
+    couple of private functions are set to help the maze and path solving.
+    solve_maze is the solver and uses BFS graph search to find optimal path through maze.
     """
 
-    def __init__(self, start=(0, 0), steps=20):
+    def __init__(self, start=(0, 0)):
         self.start = start
         self.maze = None
-        self.solved = False
         self.exit = []
         self.path = []
-        self.steps = steps
 
     def set_maze_from_file(self, txt_file=None):
         """
